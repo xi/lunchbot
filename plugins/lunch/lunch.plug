@@ -1,0 +1,9 @@
+[Core]
+Name = Lunch
+Module = lunch
+
+[Python]
+Version = 2+
+
+[Documentation]
+Description = Announces lunch time and place.
