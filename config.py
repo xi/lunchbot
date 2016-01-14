@@ -1,7 +1,7 @@
 import logging
 
 CHATROOM_FN = 'Err'
-CHATROOM_PRESENCE = ('#xi_test_errbot',)
+CHATROOM_PRESENCE = ('#test_lunchbot',)
 BACKEND = 'IRC'
 BOT_IDENTITY = {
     # XMPP (Jabber) mode
