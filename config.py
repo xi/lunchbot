@@ -16,7 +16,7 @@ BOT_IDENTITY = {
 
 BOT_PREFIX = '!'
 DIVERT_TO_PRIVATE = ()
-BOT_ADMINS = ()
+BOT_ADMINS = ('inga',)
 
 BOT_LOG_LEVEL = logging.INFO
 BOT_DATA_DIR = 'data'
