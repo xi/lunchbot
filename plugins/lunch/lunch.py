@@ -1,5 +1,6 @@
 from datetime import date, datetime
 import random
+
 from errbot import BotPlugin, botcmd
 
 
@@ -11,9 +12,18 @@ class Lunch(BotPlugin):
 
     def announce_lunch(self):
         self['last_announced'] = date.today()
-        locations = ['Tschuesch', 'Sahara', 'Ahmed', 'Hamy', 'Tung Long', 'Imren', 'Thai Sonnenallee', 'Thai Boddinstraße']
+        locations = [
+            'Tschuesch',
+            'Sahara',
+            'Ahmed',
+            'Hamy',
+            'Tung Long',
+            'Imren',
+            'Thai Sonnenallee',
+            'Thai Boddinstraße',
+        ]
         location = random.choice(locations)
-        self.broadcast('Peeps, we are hungry! Today we are going to %s!' % location)  # TODO
+        self.broadcast('Peeps, we are hungry! Today we are going to %s!' % location)
 
     def auto_announce_lunch(self):
         if datetime.now().hour == 12:
@@ -31,4 +41,4 @@ class Lunch(BotPlugin):
         This command is automatically executed at 12 each day. You can
         trigger it manually if you are hungry already.
         """
-        self.announce_lunch()  
+        self.announce_lunch()
