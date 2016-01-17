@@ -4,6 +4,14 @@ import random
 from errbot import BotPlugin, botcmd
 
 
+def choice(d):
+    l = []
+    for key, weight in d.items():
+        for i in range(weight):
+            l.append(key) 
+    return random.choice(l)
+
+
 class Lunch(BotPlugin):
     def broadcast(self, text):
         for room in self.rooms():
@@ -12,17 +20,17 @@ class Lunch(BotPlugin):
 
     def announce_lunch(self):
         self['last_announced'] = date.today()
-        locations = [
-            'Tschuesch',
-            'Sahara',
-            'Ahmed',
-            'Hamy',
-            'Tung Long',
-            'Imren',
-            'Thai Sonnenallee',
-            'Thai Boddinstraße',
-        ]
-        location = random.choice(locations)
+        locations = {
+            'Tschuesch': 10,
+            'Sahara': 5,
+            'Ahmed': 10,
+            'Hamy': 3,
+            'Tung Long': 5,
+            'Imren': 5,
+            'Thai Sonnenallee': 5,
+            'Thai Boddinstraße': 3,
+        }
+        location = choice(locations)
         self.broadcast('Peeps, we are hungry! Today we are going to %s!' % location)
 
     def auto_announce_lunch(self):
