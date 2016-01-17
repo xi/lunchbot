@@ -5,11 +5,11 @@ from errbot import BotPlugin, botcmd
 
 
 def choice(d):
-    l=[]
+    l = []
     for key, weight in d.items():
-        for i in range (weight):
+        for i in range(weight):
             l.append(key) 
-            return random.choice(l)
+    return random.choice(l)
 
 
 class Lunch(BotPlugin):
