@@ -5,7 +5,7 @@ plugin that makes errbot announce where to go for lunch.
 
 ## installation
 
-    $ pip install errbot
+    $ pip install errbot[irc,xmpp]
     $ errbot -c config.py
 
 ## choose chatroom
