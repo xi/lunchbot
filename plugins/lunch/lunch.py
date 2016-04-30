@@ -10,7 +10,7 @@ def choice(d):
     l = []
     for key, weight in d.items():
         for i in range(weight):
-            l.append(key) 
+            l.append(key)
     return random.choice(l)
 
 
@@ -33,7 +33,7 @@ class Lunch(BotPlugin):
             'Thai Boddinstraße': 3,
         }
         if date.today().weekday() == 0:
-            locations['Tschuesch'] = 0  
+            locations['Tschuesch'] = 0
         location = choice(locations)
         self.broadcast(u'Peeps, we are hungry! Today we are going to %s!' % location)
 
