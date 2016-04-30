@@ -33,8 +33,6 @@ class Lunch(BotPlugin):
             'Thai Sonnenallee': 5,
             'Thai Boddinstraße': 3,
         }
-        if date.today().weekday() == 0:
-            locations['Tschuesch'] = 0
         location = choice(locations)
         self.broadcast(u'Peeps, we are hungry! Today we are going to %s!' % location)
 
