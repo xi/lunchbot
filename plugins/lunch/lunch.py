@@ -17,8 +17,7 @@ def choice(d):
 class Lunch(BotPlugin):
     def broadcast(self, text):
         for room in self.rooms():
-            r = getattr(room, 'room', getattr(room, '_name', None))  # HACK
-            self.send(r, text, message_type='groupchat')
+            self.send(room, text)
 
     def announce_lunch(self):
         self['last_announced'] = date.today()
