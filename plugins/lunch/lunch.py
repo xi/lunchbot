@@ -18,6 +18,8 @@ class Lunch(BotPlugin):
     def broadcast(self, text):
         for room in self.rooms():
             self.send(room, text)
+            for occupant in room.occupants:
+                self.send(occupant, text)
 
     def announce_lunch(self):
         self['last_announced'] = date.today()
