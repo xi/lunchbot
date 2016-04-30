@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 from datetime import date, datetime
 import random
 
@@ -33,7 +35,7 @@ class Lunch(BotPlugin):
         if date.today().weekday() == 0:
             locations['Tschuesch'] = 0  
         location = choice(locations)
-        self.broadcast('Peeps, we are hungry! Today we are going to %s!' % location)
+        self.broadcast(u'Peeps, we are hungry! Today we are going to %s!' % location)
 
     def auto_announce_lunch(self):
         if datetime.now().hour == 12:

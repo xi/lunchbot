@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 import logging
 
 CHATROOM_FN = 'Err'
