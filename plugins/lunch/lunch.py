@@ -24,16 +24,22 @@ class Lunch(BotPlugin):
     def announce_lunch(self):
         self['last_announced'] = date.today()
         locations = {
-            'Tschuesch': 10,
-            'Sahara': 5,
-            'Ahmed': 10,
-            'Hamy': 3,
-            'Tung Long': 5,
-            'Imren': 5,
-            'Thai Sonnenallee': 5,
-            'Thai Boddinstraße': 3,
+            'Tschüsch': 1,
+            'Sahara': 8,
+            'Alassil': 8,
+            'Tung Long (stinki)': 10,
+            'Imren': 1,
+            'Thai Boddinstraße': 1,
+            'Jasmin': 4,
+            'Pizza': 3,
+            'Gözleme': 1,
         }
-        location = choice(locations)
+
+        if date.today().weekday() == 1:
+            location = 'Tschüsch'
+        else:
+            location = choice(locations)
+
         self.broadcast(u'Peeps, we are hungry! Today we are going to %s!' % location)
 
     def auto_announce_lunch(self):
