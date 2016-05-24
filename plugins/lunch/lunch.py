@@ -50,12 +50,3 @@ class Lunch(BotPlugin):
     def activate(self):
         super(Lunch, self).activate()
         self.start_poller(10, self.auto_announce_lunch)
-
-    @botcmd
-    def lunch(self, mess, args):
-        """Automatically select a place to have lunch and announce it.
-
-        This command is automatically executed at 12 each day. You can
-        trigger it manually if you are hungry already.
-        """
-        self.announce_lunch()
