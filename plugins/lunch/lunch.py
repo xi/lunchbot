@@ -43,7 +43,8 @@ class Lunch(BotPlugin):
         self.broadcast(u'Peeps, we are hungry! Today we are going to %s!' % location)
 
     def auto_announce_lunch(self):
-        if datetime.now().hour == 12:
+        now = datetime.now()
+        if now.weekday() < 5 and now.hour == 12:
             if self['last_announced'] != date.today():
                 self.announce_lunch()
 
