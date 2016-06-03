@@ -46,6 +46,7 @@ class Lunch(BotPlugin):
         now = datetime.now()
         if now.weekday() < 5 and now.hour == 12:
             if self['last_announced'] != date.today():
+            if self.get('last_announced') != date.today():
                 self.announce_lunch()
 
     def activate(self):
