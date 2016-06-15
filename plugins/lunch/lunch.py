@@ -27,12 +27,13 @@ class Lunch(BotPlugin):
             'Tschüsch': 1,
             'Sahara': 8,
             'Alassil': 8,
-            'Tung Long (stinki)': 10,
-            'Imren': 1,
-            'Thai Boddinstraße': 1,
+            'Tung Long (stinki)': 9,
+            'Imren': 3,
+            'Thai Boddinstraße': 2,
             'Jasmin': 4,
-            'Pizza': 3,
-            'Gözleme': 1,
+            'Pizza': 4,
+            'Gözleme': 3 ,
+            'Go be creative and try out something new!': 1
         }
 
         if date.today().weekday() == 1:
