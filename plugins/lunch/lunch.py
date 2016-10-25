@@ -36,7 +36,7 @@ class Lunch(BotPlugin):
             'Go be creative and try out something new!': 1
         }
 
-        if date.today().weekday() == 1:
+        if date.today().weekday() == 2:
             location = 'Tschüsch'
         else:
             location = choice(locations)
