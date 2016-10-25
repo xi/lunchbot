@@ -26,7 +26,7 @@ class Lunch(BotPlugin):
         locations = {
             'Tschüsch': 1,
             'Sahara': 8,
-            'Alassil': 8,
+            'Azzam/Shitty Chicken': 8,
             'Tung Long (stinki)': 9,
             'Imren': 3,
             'Thai Boddinstraße': 2,
@@ -36,7 +36,7 @@ class Lunch(BotPlugin):
             'Go be creative and try out something new!': 1
         }
 
-        if date.today().weekday() == 1:
+        if date.today().weekday() == 2:
             location = 'Tschüsch'
         else:
             location = choice(locations)
