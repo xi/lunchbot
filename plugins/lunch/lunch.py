@@ -30,7 +30,7 @@ class Lunch(BotPlugin):
             'Tung Long (stinki)': 9,
             'Imren': 3,
             'Thai Boddinstraße': 2,
-            'Jasmin': 4,
+            'Jasmin': 1,
             'Pizza': 4,
             'Gözleme': 3,
             'König Otto': 4,
