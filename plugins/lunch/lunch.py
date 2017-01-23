@@ -32,7 +32,7 @@ class Lunch(BotPlugin):
             'Thai Boddinstraße': 2,
             'Jasmin': 4,
             'Pizza': 4,
-            'Gözleme': 3 ,
+            'Gözleme': 3,
             'Go be creative and try out something new!': 1
         }
 
