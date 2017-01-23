@@ -33,6 +33,7 @@ class Lunch(BotPlugin):
             'Jasmin': 4,
             'Pizza': 4,
             'Gözleme': 3,
+            'König Otto': 4,
             'Go be creative and try out something new!': 1
         }
 
